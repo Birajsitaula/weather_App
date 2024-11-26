@@ -8,6 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors()); // Enable CORS for all routes
+const { PORT } = process.env;
 
 app.get("/weather/:city", async (req, res) => {
   const { city } = req.params;
@@ -19,6 +20,6 @@ app.get("/weather/:city", async (req, res) => {
   }
 });
 
-app.listen(8000, () => {
+app.listen(PORT, () => {
   console.log("The server is started successfully");
 });
