@@ -12,7 +12,7 @@ document
       const response = await fetch(`http://localhost:8000/weather/${city}`);
       if (!response.ok) throw new Error("City not found");
 
-      const data = await response.json();
+      const data = await response.json({ message: "Didn't find the city " });
 
       weatherResult.innerHTML = `
         <h2>Weather in ${data.city}</h2>
