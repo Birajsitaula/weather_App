@@ -1,4 +1,3 @@
-// app.js
 document
   .getElementById("weatherForm")
   .addEventListener("submit", async (event) => {
