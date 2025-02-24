@@ -20,6 +20,16 @@ app.get("/weather/:city", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log("The server is started successfully");
 });
+
+const shutdown = () => {
+  console.log("The server is shutting down...");
+  server.close(() => {
+    console.log("The server is shut down successfully");
+  });
+};
+
+process.on("SIGINT", shutdown);
+process.on("SIGTERM", shutdown);
