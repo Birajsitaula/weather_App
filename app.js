@@ -18,7 +18,7 @@ document
         <p>Temperature: ${data.temperature} °C</p>
         <p>Description: ${data.description}</p>
         <p>Humidity: ${data.humidity}%</p>
-        <p>Wind Speed: ${data.wind.speed} m/s</p>
+        <p>Wind_Speed: ${data.wind.speed} m/s</p>
       `;
     } catch (error) {
       weatherResult.innerHTML = `<p style="color: red;">${error.message}</p>`;
