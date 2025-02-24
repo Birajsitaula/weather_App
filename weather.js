@@ -15,7 +15,7 @@ async function getWeather(city) {
       temperature: data.main.temp,
       description: data.weather[0].description,
       humidity: data.main.humidity,
-      wind: data.wind.speed,
+      wind: data.wind, // removing .speed
     };
   } catch (err) {
     console.error(err);
